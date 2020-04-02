@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<!-- 이름,아이디,비밀번호,비밀번호 확인, 휴대폰번호, 직업-> 셀렉트(회사원,자영업자,학생,전업주부,기타), 결혼여부->라디오(예,아니오), 관심사->체크박스(컴퓨터/인터넷,영화/비디오,음악,쇼핑,게임,문화/예술,요리,인테리어,레저/여가,건강/다이어트)
+
+	전송-> ex0402_02.jsp 직업 한글, 결혼여부 한글 관심사 한글 -->
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			h2{ text-align: center;}
+			form{ width:300px; margin:0 auto;}
+			input[type="text"]{ float:right; margin-top:19px; width:200px; height: 20px;
+				font-size: 15px; border: none; }
+			label{ display: inline-block; height: 30px; margin-top:10px;}
+		</style>
+	</head>
+	<body>
+		<h2>회원가입</h2>
+		<form action="ex0402_02.jsp" name="form2" id="form2" method="post">
+			<label for="name">이름</label>
+			<input type="text" name="name" id="name"><br><hr>
+			<label for="id">아이디</label>
+			<input type="text" name="id" id="id"><br><hr>
+			<label for="pw">비밀번호</label>
+			<input type="text" name="pw" id="pw"><br><hr>
+			<label for="pw2">비밀번호확인</label>
+			<input type="text" name="pw2" id="pw2"><br><hr>
+			<label for="tel">휴대폰번호</label>
+			<input type="text" name="tel" id="tel"><br><hr>
+			<p>직업</p>
+			<select name="job" id="job">
+				<option value="salery">회사원</option>
+				<option value="mart">자영업자</option>
+				<option value="student">학생</option>
+				<option value="wife">전업주부</option>
+				<option value="extra">기타</option>
+			
+			</select>
+			<fieldset>
+				<legend>결혼여부</legend>
+				<input type="radio" name="marige" value="yes" id="marige_y"><label for="marige_y">예</label>
+				<input type="radio" name="marige" value="no" id="marige_n"><label for="marige_n">아니오</label>
+			</fieldset>
+			
+			<fieldset>
+				<legend>관심사</legend>
+				<input type="checkbox" name="interest" value="com" id="com"><label for="com">컴퓨터/인터넷</label><br>
+				
+				<input type="checkbox" name="interest" value="movie" id="movie"><label for="movie">영화/비디오</label><br>
+				
+				<input type="checkbox" name="interest" value="music" id="music"><label for="music">음악</label><br>
+				
+				<input type="checkbox" name="interest" value="shopping" id="shopping"><label for="shopping">쇼핑</label><br>
+				
+				<input type="checkbox" name="interest" value="game" id="game"><label for="game">게임</label><br>
+				
+				<input type="checkbox" name="interest" value="culture" id="culture"><label for="culture">문화/예술</label><br>
+				
+				<input type="checkbox" name="interest" value="cook" id="cook"><label for="cook">요리</label><br>
+				
+				<input type="checkbox" name="interest" value="interior" id="interior"><label for="interior">인테리어</label><br>
+				
+				<input type="checkbox" name="interest" value="leisure" id="leisure"><label for="leisure">레저/여가</label><br>
+				
+				<input type="checkbox" name="interest" value="diet" id="diet"><label for="diet">건강/다이어트</label><br>
+				
+			
+			</fieldset>
+			<br>
+			
+			<input type="submit" value="전송">
+			<input type="reset" value="취소">
+			
+		
+		
+		
+		
+		</form>
+	
+	
+	</body>
+</html>
