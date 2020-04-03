@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		function check(){
+			var name_ch=/^[가-힣]{1,}$/;				
+			var num_ch=/^[0-9]{1,}$/;
+			if(!(name_ch.test(form2.name.vlaue))){
+				alert("이름은 한글만 입력하세요.");
+				form2.name.vlaue="";
+				form2.name.focus();
+				return false;
+			}
+			if(!(num_ch.test(form2.hak_num.vlaue))){
+				alert("숫자만 입력하세요.");
+				form2.hak_num.vlaue="";
+				form2.hak_num.focus();
+				return false;
+			}
+			if(!(num_ch.test(form2.kor.vlaue))){
+				alert("숫자만 입력하세요.");
+				form2.kor.vlaue="";
+				form2.kor.focus();
+				return false;
+			}
+			if(!(num_ch.test(form2.eng.vlaue))){
+				alert("숫자만 입력하세요.");
+				form2.eng.vlaue="";
+				form2.eng.focus();
+				return false;
+			}
+			if(!(num_ch.test(form2.math.vlaue))){
+				alert("숫자만 입력하세요.");
+				form2.math.vlaue="";
+				form2.math.focus();
+				return false;
+			}
+			return true;
+		}
+		</script>
+		
+	</head>
+	<body>
+		<h1>학생성적입력</h1>
+		<form action="ex0403_02.jsp" name="form2" method="get" onsubmit="return check()">
+			<label for="hak_num">학번</label>
+			<input type="text" name="hak_num" id="hak_num"><br>
+			<label for="name">이름</label>
+			<input type="text" name="name" id="name"><br>
+			<label for="kor">국어</label>
+			<input type="text" name="kor" id="kor"><br>
+			<label for="eng">영어</label>
+			<input type="text" name="eng" id="eng"><br>
+			<label for="math">수학</label>
+			<input type="text" name="math" id="math"><br>
+			<input type="submit" value="전송">
+			<input type="reset" value="취소">			
+		</form>
+	</body>
+</html>
