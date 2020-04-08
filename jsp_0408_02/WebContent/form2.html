@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/check.js"></script>
+		<style type="text/css">
+			*{ margin:0; padding:0;}
+			#form_wrap{ width:500px; margin:20px auto;}
+			input[type="text"],input[type="password"]{ width:100px; height: 20px; border: 1px solid #8e8e8e;}
+		</style>
+	</head>
+	<body>
+		<!-- 이름,아이디,패스워드,패스워드확인,성별,주소   ->받아서 출력을 해보기 (ex0408_03.jsp) ->자바빈사용
+		 -->
+		
+		
+		<div id="form_wrap">
+		<h2>회원가입</h2>
+		<form action="ex0408_03.jsp" name="join_m" method="post" onsubmit="return check()">
+			이름(한글만) : <input type="text" name="m_name"><br>
+			아이디(영어 대소문자, 숫자1개이상 포함): <input type="text" name="m_id"><br>
+			패스워드(특수문자,숫자1개이상 포함) : <input type="password" name="m_pw"><br>
+			패스워드 확인 : <input type="password" name="m_pw2"><br>
+			<fieldset>
+			<legend>성별</legend>
+			<input type="radio" name="m_gender" value="man">남<br>
+			<input type="radio" name="m_gender" value="woman">여<br>
+			</fieldset>
+			<p>주소</p>
+			<select name="m_address">
+				<option value="seoul">서울</option>
+				<option value="busan">부산</option>
+				<option value="gyeongi">경기</option>
+				<option value="incheon">인천</option>
+			</select>
+			<br>
+			<input type="submit" value="가입">
+			<input type="reset" value="취소">
+		
+		</form>
+		</div>
+		
+		
+		
+	</body>
+</html>
